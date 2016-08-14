@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/postlogin.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+
+  </head>
+<body id="problemstatement" style="overflow-x:hidden;">
+  <!-- Dropdown Structure -->
+  <ul id="dropdown2" class="dropdown-content">
+  <li><a href="#!">Show all Users</a></li>
+  <li><a href="#!">Add Problem</a></li>
+  <li><a href="#!">Admin Dashboard</a></li>
+  <li><a href="#!">Shortlist</a></li>
+  </ul>
+  <!-- Dropdown Structure -->
+  <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Logout</a></li>
+  </ul>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo hide-on-med-and-up">GDG VIT Vellore</a>
+       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <div class="row">
+        <div class="col m10 l10 s12 push-l1 m1">
+          <ul class="left hide-on-med-and-down">
+            <li class="navbar-tabs" id="nav-logo"><a href="problems.html">GDG VIT Vellore</a></li>
+            <li class="navbar-tabs"><a href="problemstatement.html">Problem Statements</a></li>
+            <li class="navbar-tabs"><a href="#">Dashboard</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li class="navbar-tabs"><a class="dropdown-button" href="#!" data-activates="dropdown2">Admin Panel</a></li>
+            <li class="navbar-tabs"><a class="dropdown-button" id="uname-dropdown" href="#!" data-activates="dropdown1">Selena Gommez</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="side-nav" id="mobile-demo">
+          <li><a href="problemstatement.html">Problem Statement</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a onclick='$("#admin-panel-nav").toggleClass("invisible");'>Admin Panel</a>
+            <ul class="invisible" id="admin-panel-nav">
+              <li><a href="#!">Show all Users</a></li>
+              <li><a href="#!">Add Problem</a></li>
+              <li><a href="#!">Admin Dashboard</a></li>
+              <li><a href="#!">Shortlist</a></li>
+            </ul>
+          </li>
+          <li><a onclick='$("#logout-nav").toggleClass("invisible");'>Salena Gommez</a>
+            <ul class="invisible" id="logout-nav">
+              <li><a href="#!">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+  </nav>
+
+<br>
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col m8 l8 push-l2 push-l2">
+      <div class="row">
+        <div class="col m12 l12">
+          <div class="data-card">
+            <div class="card-head">
+              Problem Statement
+              <div class="right">
+                <div class="blue-button" id="attempt">
+                  Attempt <span>Problem</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Hi! Vishwajeeth likes a girl who cant be named, and that girl shares all of Ankur's facebook posts. This makes Vishwajeeth Jealous. How will you solve this problem?</p>
+              <div class="card-comment">Comments</div>
+              <p id='comment'>Use your imagination, go wild.</p>
+            </div>
+          </div>
+          <br>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" id="upload-file">
+  <form name="#" id="upload-form" method="post" action="">
+  <div class="col m8 l8 s12 push-l2 push-l2">
+    <div class="row">
+      <div class="col m12 l12 s12">
+        <div class="data-card">
+          <div class="card-head">
+            Upload File
+          </div>
+          <div class="card-body">
+            <div class="upload-text-holder">
+              <p class="upload-text">You can either upload your file or can give the link below</p>
+              <p class="upload-text">You can only submit your solution <b>once</b></p>
+            </div>
+            <br>
+            <input type="file" class="upload-file">
+            <div class="row">
+              <br>
+              <p class="link-to-file">Link To File</p>
+              <div class="col m8 l8 upload-link">
+                <input type="text" placeholder="Link to the project source(Github) or document link">
+              </div>
+              <div class="col m2 l2">
+                <a onclick="$('#upload-form').submit();">
+                <div class="blue-button upload-btn">
+                  Upload
+                </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+  </div>
+</div>
+</form>
+</div>
+</div>
+<script>
+  $('.dropdown-button').dropdown({
+      inDuration: 100,
+      outDuration: 100,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'right' // Displays dropdown with edge aligned to the left of button
+    });
+
+    $('#uname-dropdown').dropdown({
+      inDuration: 100,
+      outDuration: 100,
+      constrain_width: true, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'right' // Displays dropdown with edge aligned to the left of button
+    });
+
+
+  $(document).ready(function(){
+      $("#upload-file").hide();
+      $("#attempt").click(function()
+      {
+        $("#upload-file").show();
+      });
+        $(".button-collapse").sideNav();
+  });
+</script>
+</body>
+</HTML>

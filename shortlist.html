@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html style="overflow-x:hidden;">
+  <head>
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/postlogin.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet ' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+
+  </head>
+<body>
+
+    <!-- Dropdown Structure -->
+    <ul id="dropdown2" class="dropdown-content">
+    <li><a href="#!">Show all Users</a></li>
+    <li><a href="#!">Add Problem</a></li>
+    <li><a href="#!">Admin Dashboard</a></li>
+    <li><a href="#!">Shortlist</a></li>
+    </ul>
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">Logout</a></li>
+    </ul>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo hide-on-med-and-up">GDG VIT Vellore</a>
+       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <div class="row">
+        <div class="col m10 l10 s12 push-l1 m1">
+          <ul class="left hide-on-med-and-down">
+            <li class="navbar-tabs" id="nav-logo"><a href="problems.html">GDG VIT Vellore</a></li>
+            <li class="navbar-tabs"><a href="problemstatement.html">Problem Statements</a></li>
+            <li class="navbar-tabs"><a href="#">Dashboard</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li class="navbar-tabs"><a class="dropdown-button" href="#!" data-activates="dropdown2">Admin Panel</a></li>
+            <li class="navbar-tabs"><a class="dropdown-button" id="uname-dropdown" href="#!" data-activates="dropdown1">Selena Gommez</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="side-nav" id="mobile-demo">
+          <li><a href="problemstatement.html">Problem Statement</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a onclick='$("#admin-panel-nav").toggleClass("invisible");'>Admin Panel</a>
+            <ul class="invisible" id="admin-panel-nav">
+              <li><a href="#!">Show all Users</a></li>
+              <li><a href="#!">Add Problem</a></li>
+              <li><a href="#!">Admin Dashboard</a></li>
+              <li><a href="#!">Shortlist</a></li>
+            </ul>
+          </li>
+          <li><a onclick='$("#logout-nav").toggleClass("invisible");'>Salena Gommez</a>
+            <ul class="invisible" id="logout-nav">
+              <li><a href="#!">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <div class="container-fluid">
+    <div class="row">
+      <form name="#" id="shortlist-form" method="post" action="a">
+      <div class="col m8 l8 push-l2 push-l2">
+        <div class="row">
+          <div class="col m12 l12">
+            <div class="data-card">
+              <div class="card-head">
+                Login
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col m4 l4 s12">
+                    <div class="prob-field">
+                      Domain
+                    </div>
+                  </div>
+                  <div class="col m6 l6 s12">
+                    <div class="input-field">
+                      <select id="add-proj-select">
+                        <option value=1>Technical</option>
+                        <option value=2>Management</option>
+                        <option value=3>Design</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col m4 l4 s12">
+                    <div class="prob-field">
+                      Nummber of people you want to shortlist
+                    </div>
+                  </div>
+                  <div class="col m6 l6 s12">
+                    <div class="input-field">
+                      <input type="text" placeholder="Number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col m2 l2 push-m4 push-l4">
+                  <a onclick="$('#shortlist-form').submit();">
+                  <div class="blue-button" id="view-submissions">
+                    Shortlist
+                  </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <br>
+          </div>
+      </div>
+    </div>
+  </form>
+  </div>
+  </div>
+  <script>
+  $('.dropdown-button').dropdown({
+      inDuration: 100,
+      outDuration: 100,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'right' // Displays dropdown with edge aligned to the left of button
+    });
+
+    $('#uname-dropdown').dropdown({
+      inDuration: 100,
+      outDuration: 100,
+      constrain_width: true, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'right' // Displays dropdown with edge aligned to the left of button
+    });
+    $('select').material_select();
+    $(".button-collapse").sideNav();
+
+  </script>
+</body>
+</html>

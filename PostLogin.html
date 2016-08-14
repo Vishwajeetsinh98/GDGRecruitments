@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html style="overflow-x:hidden;">
+  <head>
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/postlogin.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet ' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+
+  </head>
+<body>
+
+    <!-- Dropdown Structure -->
+    <ul id="dropdown2" class="dropdown-content">
+    <li><a href="#!">Show all Users</a></li>
+    <li><a href="#!">Add Problem</a></li>
+    <li><a href="#!">Admin Dashboard</a></li>
+    <li><a href="#!">Shortlist</a></li>
+    </ul>
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">Logout</a></li>
+    </ul>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo hide-on-med-and-up">GDG VIT Vellore</a>
+       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <div class="row">
+        <div class="col m10 l10 s12 push-l1 m1">
+          <ul class="left hide-on-med-and-down">
+            <li class="navbar-tabs" id="nav-logo"><a href="problems.html">GDG VIT Vellore</a></li>
+            <li class="navbar-tabs"><a href="problemstatement.html">Problem Statements</a></li>
+            <li class="navbar-tabs"><a href="#">Dashboard</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li class="navbar-tabs"><a class="dropdown-button" href="#!" data-activates="dropdown2">Admin Panel</a></li>
+            <li class="navbar-tabs"><a class="dropdown-button" id="uname-dropdown" href="#!" data-activates="dropdown1">Selena Gommez</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="side-nav" id="mobile-demo">
+          <li><a href="problemstatement.html">Problem Statement</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a onclick='$("#admin-panel-nav").toggleClass("invisible");'>Admin Panel</a>
+            <ul class="invisible" id="admin-panel-nav">
+              <li><a href="#!">Show all Users</a></li>
+              <li><a href="#!">Add Problem</a></li>
+              <li><a href="#!">Admin Dashboard</a></li>
+              <li><a href="#!">Shortlist</a></li>
+            </ul>
+          </li>
+          <li><a onclick='$("#logout-nav").toggleClass("invisible");'>Salena Gommez</a>
+            <ul class="invisible" id="logout-nav">
+              <li><a href="#!">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+  </nav>
+
+<div class="container-fluid">
+  <div class='row' id="user-data">
+    <br>
+    <br>
+    <div class="col m10 l10 push-l1 push-m1">
+      <div class="row">
+        <div class="col m6 l6">
+          <div class="user-name">
+            Selena Gommez
+          </div>
+          <span class='user-data-head'>Personal Details</span>
+          <div class="row">
+            <div class="col m6 l6" style="padding-left:0;">
+              <div class="user-details">
+                <p>Reg Number&nbsp:&nbsp<span>15BEC0092</span></p>
+                <p>Vit Vellore</p>
+              </div>
+            </div>
+            <div class="col m6 l6" style="padding-left:0;">
+              <div class="user-details">
+                <p>Marks&nbsp:&nbsp<span>99</span></p>
+                <p>Selected&nbsp:&nbsp<span>No Status</span></p>
+              </div>
+            </div>
+          </div>
+          <span class='user-data-head'>Why GDG</span>
+          <div class="row">
+            <div class="col m12 l12" style="padding-left:0;">
+              <div class="user-details">
+                <p><span>There are no girls in technical department. Jag Suna Suna Lage.</span></p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col m6 l6">
+          Graph Goes Here
+      </div>
+      </div>
+
+      <div class="hidden-user-data">
+        <div class='row'>
+          <div class='col m12 l12'>
+            <hr id="user-data-split-line">
+            <br>
+            <div class="hidden-user-data">
+              <span class='user-data-head'>Experience</span>
+            <div class="row">
+              <div class="col m12 l12" style="padding-left:0;">
+                <div class="user-details">
+                  <p><span>There are no girls in technical department. Jag Suna Suna Lage.</span></p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col m6 l6">
+            <span class='user-data-head'>Github</span>
+          <div class="row">
+            <div class="col m12 l12" style="padding-left:0;">
+              <div class="user-details">
+                <p><span>www.github.com/YehSaabMohMayaHai</span></p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="col m6 l6">
+            <span class='user-data-head'>Facebook</span>
+          <div class="row">
+            <div class="col m12 l12" style="padding-left:0;">
+              <div class="user-details">
+                <p><span>www.facebook.com/Yehpakkamohmayahai</span></p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    <br>
+  </div>
+</div>
+  <div class="row">
+    <div class="col m10 l10 s12 push-l1 push-m1">
+      <div class="row"  id="cards-row">
+        <div class="col m6 l6 s12">
+          <div class="data-card">
+            <div class="card-head">
+              Checked Problems
+            </div>
+            <div class="card-body">
+              <div class="card-body-content">
+                Palindrome It!
+              </div>
+              <div class="card-body-content">
+                Palindrome It!
+              </div>
+              <div class="card-body-content">
+                Palindrome It!
+              </div>
+              <div class="card-body-content">
+                Palindrome It!
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+        <div class="col m6 l6 s12">
+          <div class="data-card">
+            <div class="card-head">
+              Unchecked Problems
+            </div>
+            <div class="card-body">
+              <div class="card-body-content">
+                Palindrome It!
+              </div>
+              <div class="card-body-content">
+                Palindrome It!
+              </div>
+              <div class="card-body-content">
+                Palindrome It!
+              </div>
+              <div class="card-body-content">
+                Palindrome It!
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$('.dropdown-button').dropdown({
+    inDuration: 100,
+    outDuration: 100,
+    constrain_width: false, // Does not change width of dropdown to that of the activator
+    hover: true, // Activate on hover
+    gutter: 0, // Spacing from edge
+    belowOrigin: true, // Displays dropdown below the button
+    alignment: 'right' // Displays dropdown with edge aligned to the left of button
+  });
+
+  $('#uname-dropdown').dropdown({
+    inDuration: 100,
+    outDuration: 100,
+    constrain_width: true, // Does not change width of dropdown to that of the activator
+    hover: true, // Activate on hover
+    gutter: 0, // Spacing from edge
+    belowOrigin: true, // Displays dropdown below the button
+    alignment: 'right' // Displays dropdown with edge aligned to the left of button
+  });
+
+  $(".button-collapse").sideNav();
+
+</script>
+</body>
+</html>
