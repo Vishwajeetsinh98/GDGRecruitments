@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  $('#second-content').css('display','none');
+  $('#third-content').css('display','none');
   $('#modal-trigger').click(function(){
     swal({
       title: '',
@@ -10,6 +12,7 @@ $(document).ready(function(){
   });
   $('.links a').click(function(){
     if(!($(this).hasClass('active-link'))){
+      $('#'+$(this).attr('data-to')).css('display','block');
       $.smoothScroll({
         scrollElement: $('.content'),
         scrollTarget: '#'+$(this).attr('data-to')
@@ -28,5 +31,12 @@ $(document).ready(function(){
       $(this).find($('img')).attr('src', 'images/Button Selected.png');
       $(this).addClass('active-link');
     }
-  })
+  });
+  $.fn.scrollStopped = function(callback) {
+    var that = this, $this = $(that);
+    $this.scroll(function(ev) {
+      clearTimeout($this.data('scrollTimeout'));
+      $this.data('scrollTimeout', setTimeout(callback.bind(that), 100, ev));
+    });
+  };
 });
