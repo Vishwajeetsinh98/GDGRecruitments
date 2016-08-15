@@ -92,3 +92,8 @@ body{
     left: 43vw;
   }
 }
+@media only screen and (min-device-width: 1920px) and (max-device-width: 2000px){
+  .links{
+    left: 43.5vw;
+  }
+}
