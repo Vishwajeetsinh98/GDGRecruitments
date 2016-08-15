@@ -12,19 +12,21 @@ body{
   min-height: 100vh;
   max-height: 500vh;
   border-top: 1px solid rgba(255,255,255,0.5);
+  z-index: 100;
 }
 .right-content{
   padding: 2%!important;
 }
 .right-content img{
-  margin-top: -1%;
+  margin-top: -15%;
   width: 100%;
+  z-index: 0;
 }
 .content{
   min-height: 100vh;
   margin-top: -17%!important;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
   border-right: 1px solid rgba(255,255,255,0.2);
 }
 ::-webkit-scrollbar{
